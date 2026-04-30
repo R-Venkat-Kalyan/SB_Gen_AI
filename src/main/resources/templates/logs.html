@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Console</title>
+    <style>
+        body { background: #0d1117; color: #c9d1d9; font-family: monospace; padding: 20px; }
+        .nav { position: sticky; top: 0; background: #161b22; padding: 15px; display: flex; justify-content: space-between; border-bottom: 1px solid #30363d; }
+        button { background: #238636; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        #output { margin-top: 20px; white-space: pre-wrap; word-wrap: break-word; }
+        .error-log { color: #ff7b72; font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <span>● LIVE SYSTEM CONSOLE</span>
+    <button onclick="window.location.href='/analyze'">✨ ANALYZE WITH AI</button>
+</div>
+<div id="output">Initializing stream...</div>
+<script>
+    const es = new EventSource('/dev/stream');
+    es.onmessage = (e) => {
+        const line = document.createElement('div');
+        line.textContent = e.data;
+        if(e.data.includes("ERROR") || e.data.includes("Exception")) line.className = "error-log";
+        document.getElementById('output').appendChild(line);
+        window.scrollTo(0, document.body.scrollHeight);
+    };
+</script>
+</body>
+</html>

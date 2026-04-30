@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Diagnostic Report</title>
+    <style>
+        body { font-family: sans-serif; background: #f6f8fa; padding: 40px; color: #24292f; }
+        .card { max-width: 850px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .summary-box { background: #eef7ff; border-left: 5px solid #0969da; padding: 15px; margin: 20px 0; }
+        .error-section { border: 2px solid #cf222e; border-radius: 8px; padding: 20px; background: #fffbfa; margin-top: 30px; }
+        .fix-code { background: #1b1f23; color: #e6edf3; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: monospace; }
+        .badge { background: #cf222e; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; vertical-align: middle; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>AI System Diagnostic</h1>
+    <div id="loader">🔄 Gemini is reviewing logs...</div>
+
+    <div id="report" style="display:none">
+        <h3>Normal Activity Summary</h3>
+        <div id="genSum" class="summary-box"></div>
+
+        <div class="error-section">
+            <h2><span class="badge">ISSUE DETECTED</span> <span id="errType"></span></h2>
+            <p><strong>Root Cause:</strong> <span id="rca"></span></p>
+            <p><strong>Location:</strong> <code id="loc"></code></p>
+            <h3>Recommended Fix</h3>
+            <pre class="fix-code" id="fix"></pre>
+            <h3>Action Plan</h3>
+            <p id="plan"></p>
+        </div>
+    </div>
+</div>
+<script>
+    fetch('/dev/api/run-analysis').then(r => r.json()).then(data => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('report').style.display = 'block';
+        document.getElementById('genSum').innerText = data.generalSummary;
+        document.getElementById('errType').innerText = data.errorType;
+        document.getElementById('rca').innerText = data.rootCauseAnalysis;
+        document.getElementById('loc').innerText = data.fileLocation;
+        document.getElementById('fix').innerText = data.suggestedFixCode;
+        document.getElementById('plan').innerText = data.stepByStepPlan;
+    }).catch(err => {
+        document.getElementById('loader').innerText = "Analysis failed. Check your API key and network.";
+    });
+</script>
+</body>
+</html>

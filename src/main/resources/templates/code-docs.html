@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Code Docs</title>
+    <style>
+        body { font-family: sans-serif; background: #f8fafc; padding: 40px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .user-view { border-left: 6px solid #10b981; background: #f0fdf4; padding: 15px; }
+        .dev-view { border-left: 6px solid #6366f1; background: #f5f3ff; padding: 15px; }
+        .route-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .route-table th, .route-table td { border: 1px solid #e2e8f0; padding: 10px; text-align: left; }
+        .missing { color: #ef4444; font-weight: bold; padding: 10px; background: #fef2f2; border: 1px dashed #ef4444; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 Application Intelligence</h1>
+        <div id="loader">Scanning codebase and mapping flows...</div>
+        
+        <div id="report" style="display:none">
+            <h2>For Normal Users</h2>
+            <div id="userSum" class="user-view"></div>
+
+            <h2>For Developers</h2>
+            <div id="devSum" class="dev-view"></div>
+
+            <h2>Data Flow & DB Status</h2>
+            <p id="dataFlow"></p>
+            <div id="missing" class="missing"></div>
+
+            <h2>API Reference</h2>
+            <table class="route-table">
+                <thead><tr><th>Path</th><th>Method</th><th>Purpose</th><th>Usage</th></tr></thead>
+                <tbody id="routes"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        fetch('/api/code-scan').then(r => r.json()).then(data => {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('report').style.display = 'block';
+            
+            document.getElementById('userSum').innerText = data.userSummary;
+            document.getElementById('devSum').innerText = data.technicalOverview;
+            document.getElementById('dataFlow').innerText = data.dataFlowDescription;
+            
+            if(data.missingComponents) {
+                document.getElementById('missing').innerText = "⚠️ SYSTEM NOTICE: " + data.missingComponents;
+            }
+
+            const tbody = document.getElementById('routes');
+            data.apiRoutes.forEach(r => {
+                const tr = `<tr><td>${r.path}</td><td>${r.method}</td><td>${r.purpose}</td><td><code>${r.howToCall}</code></td></tr>`;
+                tbody.innerHTML += tr;
+            });
+        });
+    </script>
+</body>
+</html>
