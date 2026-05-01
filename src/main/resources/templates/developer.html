@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Developer Knowledge Transfer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 min-h-screen text-slate-200">
+<div id="loading" class="fixed inset-0 bg-slate-900 z-50 flex flex-col items-center justify-center">
+  <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 mb-4"></div>
+  <p class="text-blue-400">Performing codebase introspection...</p>
+</div>
+
+<div class="max-w-6xl mx-auto py-16 px-6">
+  <header class="flex justify-between items-center mb-12">
+    <h1 class="text-3xl font-mono font-bold text-blue-400">DEV::INTELLIGENCE</h1>
+    <a href="/dashboard" class="text-slate-500 hover:text-white">Close [x]</a>
+  </header>
+
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+    <div class="lg:col-span-2 bg-slate-800 p-8 rounded-3xl border border-slate-700">
+      <h2 class="text-blue-400 font-bold mb-4 uppercase text-sm tracking-widest">Architecture Summary</h2>
+      <p class="text-lg leading-relaxed" id="arch"></p>
+    </div>
+    <div class="bg-blue-900/30 p-8 rounded-3xl border border-blue-500/30">
+      <h2 class="text-blue-400 font-bold mb-4 uppercase text-sm tracking-widest">Stack Details</h2>
+      <p id="stack"></p>
+    </div>
+  </section>
+
+  <h2 class="text-xl font-bold mb-6 text-slate-400">Endpoint & Logic Mapping</h2>
+  <div id="routes" class="space-y-4"></div>
+</div>
+
+<script>
+  fetch('/api/data').then(r => r.json()).then(d => {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('arch').innerText = d.developerView.archSummary;
+      document.getElementById('stack').innerText = d.developerView.techStack;
+      d.developerView.routes.forEach(r => {
+          document.getElementById('routes').innerHTML += `
+              <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
+                  <div class="flex items-center gap-4 mb-3">
+                      <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">${r.method}</span>
+                      <code class="text-blue-300">${r.endpoint}</code>
+                  </div>
+                  <p class="text-slate-400 mb-4"><strong class="text-slate-200">Logic:</strong> ${r.logic}</p>
+                  <div class="text-xs text-slate-500">Renders: <span class="text-slate-300 font-mono">${r.renderedUi}</span></div>
+              </div>`;
+      });
+  });
+</script>
+</body>
+</html>

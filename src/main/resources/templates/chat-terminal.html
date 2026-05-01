@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project IQ - Chat Terminal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #0a0a0a; font-family: 'Fira Code', monospace; color: #10b981; }
+        .chat-box { height: 70vh; scrollbar-width: thin; scrollbar-color: #1e293b transparent; }
+        input { background: transparent; border: none; outline: none; width: 100%; color: #fff; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+<div class="max-w-5xl mx-auto border border-emerald-900/30 rounded-xl overflow-hidden shadow-2xl shadow-emerald-900/20">
+    <!-- Header -->
+    <div class="bg-emerald-950/20 p-4 border-b border-emerald-900/30 flex justify-between items-center">
+        <span class="text-xs font-bold uppercase tracking-widest">AI_PROJECT_TERMINAL_v1.0</span>
+        <a href="/ai-hub/dashboard" class="text-emerald-500 hover:text-white text-xs">[EXIT]</a>
+    </div>
+
+    <!-- Chat Area -->
+    <div id="chatArea" class="chat-box overflow-y-auto p-6 space-y-4 text-sm">
+        <div class="text-emerald-500/50">> System initialized. I have indexed your codebase.</div>
+        <div class="text-white">> How can I help you understand this project today?</div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="p-4 bg-emerald-950/10 border-t border-emerald-900/30 flex items-center gap-3">
+        <span class="text-emerald-500 font-bold">$</span>
+        <input type="text" id="userInput" placeholder="Ask about routes, logic, or code quality..." autocomplete="off">
+    </div>
+</div>
+
+<script>
+    const input = document.getElementById('userInput');
+    const area = document.getElementById('chatArea');
+
+    input.addEventListener('keypress', async (e) => {
+        if (e.key === 'Enter' && input.value.trim() !== '') {
+            const msg = input.value;
+            input.value = '';
+
+            // Add User Message
+            area.innerHTML += `<div class="text-blue-400"><span class="text-slate-500">USER:</span> ${msg}</div>`;
+            area.scrollTop = area.scrollHeight;
+
+            // Typing indicator
+            const botId = 'bot-' + Date.now();
+            area.innerHTML += `<div id="${botId}" class="text-emerald-500"><span class="text-slate-500">IQ:</span> ...thinking</div>`;
+
+            try {
+                const response = await fetch('/ai-chat/ask', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'text/plain'},
+                    body: msg
+                });
+                const text = await response.text();
+                document.getElementById(botId).innerHTML = `<span class="text-slate-500">IQ:</span> ${text.replace(/\n/g, '<br>')}`;
+            } catch (err) {
+                document.getElementById(botId).innerText = "Error connecting to AI.";
+            }
+            area.scrollTop = area.scrollHeight;
+        }
+    });
+</script>
+</body>
+</html>

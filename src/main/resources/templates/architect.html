@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Architectural Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen">
+<div id="loading" class="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
+  <div class="animate-pulse flex space-x-4">
+    <div class="h-12 w-12 bg-amber-500 rounded-full"></div>
+    <div class="text-2xl font-black text-slate-800">Reviewing Standards...</div>
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto py-16 px-6">
+  <div class="flex items-center justify-between mb-12">
+    <h1 class="text-4xl font-black text-slate-900 tracking-tighter">ARCHITECT_AUDIT_v1.0</h1>
+    <div class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full font-bold text-sm">
+      System Health: <span id="score">...</span>
+    </div>
+  </div>
+
+  <div id="issues" class="grid gap-8"></div>
+</div>
+
+<script>
+  fetch('/api/data').then(r => r.json()).then(d => {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('score').innerText = d.architectView.auditScore;
+      d.architectView.issues.forEach(i => {
+          const color = i.severity === 'HIGH' ? 'red' : 'amber';
+          document.getElementById('issues').innerHTML += `
+              <div class="bg-white border-t-8 border-${color}-500 rounded-3xl shadow-xl overflow-hidden">
+                  <div class="p-8">
+                      <div class="flex justify-between items-start mb-6">
+                          <h3 class="text-2xl font-bold text-slate-800">${i.rule}</h3>
+                          <span class="bg-${color}-100 text-${color}-700 text-xs font-black px-3 py-1 rounded-full">${i.severity}</span>
+                      </div>
+                      <div class="mb-6">
+                          <p class="text-slate-400 text-xs font-bold mb-2 uppercase">Identified Bad Practice</p>
+                          <pre class="bg-slate-900 text-pink-400 p-5 rounded-2xl text-sm overflow-x-auto"><code>${i.badCode}</code></pre>
+                      </div>
+                      <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
+                          <p class="text-emerald-800 font-bold mb-2 italic">Refactoring Strategy:</p>
+                          <p class="text-emerald-700">${i.fix}</p>
+                      </div>
+                  </div>
+              </div>`;
+      });
+  });
+</script>
+</body>
+</html>

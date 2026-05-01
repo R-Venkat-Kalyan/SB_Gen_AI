@@ -2,6 +2,8 @@ package com.gen_ai.gemini_demo.controller;
 
 import java.io.IOException;
 
+import com.gen_ai.gemini_demo.dto.ProjectIntelligence;
+import com.gen_ai.gemini_demo.service.ProjectIntelligenceService;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,11 +22,14 @@ public class LiveLogController {
 	private final WebLogAppender appender;
 	private final LogAnalyzerService aiService;
 	private final CodeScannerService codeScannerService;
+	private final ProjectIntelligenceService intelligenceService;
 
-	public LiveLogController(WebLogAppender appender, LogAnalyzerService aiService, CodeScannerService scannerService) {
+	public LiveLogController(WebLogAppender appender, LogAnalyzerService aiService,
+							 CodeScannerService scannerService, ProjectIntelligenceService intelligenceService) {
 		this.appender = appender;
 		this.aiService = aiService;
 		this.codeScannerService = scannerService;
+		this.intelligenceService = intelligenceService;
 	}
 
 	@GetMapping("/logs")
@@ -58,6 +63,16 @@ public class LiveLogController {
 	@GetMapping("/code-docs")
 	public String showDocsPage() {
 	    return "code-docs"; // Points to new HTML template
+	}
+
+	@GetMapping("/dashboard") public String dash() { return "dashboard"; }
+	@GetMapping("/user") public String user() { return "user"; }
+	@GetMapping("/developer") public String dev() { return "developer"; }
+	@GetMapping("/architect") public String arch() { return "architect"; }
+
+	@GetMapping("/api/data")
+	@ResponseBody public ProjectIntelligence getData() throws IOException {
+		return intelligenceService.getFullIntelligence();
 	}
 
 }

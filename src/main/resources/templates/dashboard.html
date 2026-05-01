@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Intelligence Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: radial-gradient(circle at top left, #0f172a, #1e293b); min-height: 100vh; color: white; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center p-6">
+<div class="max-w-6xl w-full text-center">
+    <h1 class="text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+        Project Intelligence Hub
+    </h1>
+    <p class="text-slate-400 text-xl mb-16">Deep-dive AI analysis for Users, Developers, and Architects.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="/user" class="glass p-10 rounded-3xl hover:scale-105 transition-all border-b-4 border-emerald-500">
+            <div class="text-5xl mb-6">👤</div>
+            <h2 class="text-2xl font-bold mb-3">User Guide</h2>
+            <p class="text-slate-400 text-sm">Layman walkthrough of features and UI navigation.</p>
+        </a>
+        <a href="/developer" class="glass p-10 rounded-3xl hover:scale-105 transition-all border-b-4 border-blue-500">
+            <div class="text-5xl mb-6">💻</div>
+            <h2 class="text-2xl font-bold mb-3">Developer KT</h2>
+            <p class="text-slate-400 text-sm">Internal logic, route mapping, and architecture flow.</p>
+        </a>
+        <a href="/architect" class="glass p-10 rounded-3xl hover:scale-105 transition-all border-b-4 border-amber-500">
+            <div class="text-5xl mb-6">🏛️</div>
+            <h2 class="text-2xl font-bold mb-3">Architect Audit</h2>
+            <p class="text-slate-400 text-sm">Code review, SOLID compliance, and bug detection.</p>
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Journey Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen">
+<div id="loading" class="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-emerald-500 mb-4"></div>
+    <p class="text-emerald-700 font-medium">AI is mapping the user journey...</p>
+</div>
+
+<div class="max-w-4xl mx-auto py-16 px-6">
+    <nav class="mb-12"><a href="/dashboard" class="text-emerald-600 font-bold">← Back to Hub</a></nav>
+    <h1 class="text-4xl font-black text-slate-900 mb-4 italic">User Experience Manual</h1>
+    <div id="purpose" class="bg-emerald-600 text-white p-8 rounded-3xl shadow-lg mb-12 text-lg"></div>
+
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">Feature Walkthrough</h2>
+    <div id="steps" class="space-y-6"></div>
+</div>
+
+<script>
+    fetch('/api/data').then(r => r.json()).then(d => {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('purpose').innerText = d.userView.appPurpose;
+        d.userView.steps.forEach(s => {
+            document.getElementById('steps').innerHTML += `
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-emerald-600">${s.pageName}</h3>
+                        <span class="text-xs bg-slate-100 px-3 py-1 rounded-full font-mono">${s.url}</span>
+                    </div>
+                    <p class="text-slate-600 mb-4">${s.details}</p>
+                    <div class="bg-emerald-50 p-4 rounded-xl text-sm border border-emerald-100 text-emerald-800">
+                        <strong>Action:</strong> ${s.uiActions}
+                    </div>
+                </div>`;
+        });
+    });
+</script>
+</body>
+</html>
