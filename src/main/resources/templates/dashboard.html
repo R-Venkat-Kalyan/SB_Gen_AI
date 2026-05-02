@@ -6,34 +6,91 @@
     <title>AI Intelligence Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: radial-gradient(circle at top left, #0f172a, #1e293b); min-height: 100vh; color: white; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body {
+            background: radial-gradient(circle at top left, #0f172a, #1e293b);
+            min-height: 100vh;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            border-color: rgba(255,255,255,0.3);
+        }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center p-6">
-<div class="max-w-6xl w-full text-center">
-    <h1 class="text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
-        Project Intelligence Hub
-    </h1>
-    <p class="text-slate-400 text-xl mb-16">Deep-dive AI analysis for Users, Developers, and Architects.</p>
+<body class="p-6 md:p-12">
+<div class="max-w-7xl mx-auto w-full">
+    <header class="text-center mb-16">
+        <h1 class="text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+            Project Intelligence Hub
+        </h1>
+        <p class="text-slate-400 text-lg">Full-stack AI analysis and monitoring ecosystem.</p>
+    </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <a href="/user" class="glass p-10 rounded-3xl hover:scale-105 transition-all border-b-4 border-emerald-500">
-            <div class="text-5xl mb-6">👤</div>
-            <h2 class="text-2xl font-bold mb-3">User Guide</h2>
-            <p class="text-slate-400 text-sm">Layman walkthrough of features and UI navigation.</p>
+    <!-- UNIFIED 3-COLUMN GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- ROW 1, CARD 1: USER -->
+        <a href="/user" class="glass p-10 rounded-[2.5rem] border-b-4 border-emerald-500 group">
+            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">👤</div>
+            <h3 class="text-2xl font-bold mb-3 text-emerald-400">User Guide</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Layman walkthrough of features and UI navigation flow.</p>
         </a>
-        <a href="/developer" class="glass p-10 rounded-3xl hover:scale-105 transition-all border-b-4 border-blue-500">
-            <div class="text-5xl mb-6">💻</div>
-            <h2 class="text-2xl font-bold mb-3">Developer KT</h2>
-            <p class="text-slate-400 text-sm">Internal logic, route mapping, and architecture flow.</p>
+
+        <!-- ROW 1, CARD 2: DEVELOPER -->
+        <a href="/developer" class="glass p-10 rounded-[2.5rem] border-b-4 border-blue-500 group">
+            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">💻</div>
+            <h3 class="text-2xl font-bold mb-3 text-blue-400">Developer KT</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Technical mapping: routes, service logic, and internal flows.</p>
         </a>
-        <a href="/architect" class="glass p-10 rounded-3xl hover:scale-105 transition-all border-b-4 border-amber-500">
-            <div class="text-5xl mb-6">🏛️</div>
-            <h2 class="text-2xl font-bold mb-3">Architect Audit</h2>
-            <p class="text-slate-400 text-sm">Code review, SOLID compliance, and bug detection.</p>
+
+        <!-- ROW 1, CARD 3: ARCHITECT -->
+        <a href="/architect" class="glass p-10 rounded-[2.5rem] border-b-4 border-amber-500 group">
+            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🏛️</div>
+            <h3 class="text-2xl font-bold mb-3 text-amber-400">Architect Audit</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Standards review: SOLID compliance and bug detection.</p>
         </a>
+
+        <!-- ROW 2, CARD 1: DOCS -->
+        <a href="/code-docs" class="glass p-10 rounded-[2.5rem] border-b-4 border-cyan-500 group">
+            <div class="text-5xl mb-6 group-hover:rotate-12 transition-transform">📄</div>
+            <h3 class="text-2xl font-bold mb-3 text-cyan-400">AI Code Docs</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Automated technical documentation for the entire project.</p>
+        </a>
+
+        <!-- ROW 2, CARD 2: TERMINAL -->
+        <a href="/terminal" class="glass p-10 rounded-[2.5rem] border-b-4 border-purple-500 group">
+            <div class="text-5xl mb-6 group-hover:animate-pulse">📟</div>
+            <h3 class="text-2xl font-bold mb-3 text-purple-400">Project Terminal</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Interactive AI assistant to query your codebase in real-time.</p>
+        </a>
+
+        <!-- ROW 2, CARD 3: LOGS -->
+        <a href="/logs" class="glass p-10 rounded-[2.5rem] border-b-4 border-red-500 group relative">
+            <div class="absolute top-8 right-8 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </div>
+            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📜</div>
+            <h3 class="text-2xl font-bold mb-3 text-red-400">Live Logs</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Real-time application monitoring and stack trace analysis.</p>
+        </a>
+
     </div>
+
+    <footer class="mt-16 text-center text-slate-500 text-xs tracking-[0.3em] uppercase">
+        Symmetrical Intelligence Hub &bull; v2.1
+    </footer>
 </div>
 </body>
 </html>

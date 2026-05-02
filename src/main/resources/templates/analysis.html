@@ -32,7 +32,7 @@
     </div>
 </div>
 <script>
-    fetch('/dev/api/run-analysis').then(r => r.json()).then(data => {
+    fetch('/api/run-analysis').then(r => r.json()).then(data => {
         document.getElementById('loader').style.display = 'none';
         document.getElementById('report').style.display = 'block';
         document.getElementById('genSum').innerText = data.generalSummary;

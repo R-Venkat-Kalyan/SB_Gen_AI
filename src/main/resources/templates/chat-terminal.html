@@ -15,7 +15,7 @@
     <!-- Header -->
     <div class="bg-emerald-950/20 p-4 border-b border-emerald-900/30 flex justify-between items-center">
         <span class="text-xs font-bold uppercase tracking-widest">AI_PROJECT_TERMINAL_v1.0</span>
-        <a href="/ai-hub/dashboard" class="text-emerald-500 hover:text-white text-xs">[EXIT]</a>
+        <a href="/dashboard" class="text-emerald-500 hover:text-white text-xs">[EXIT]</a>
     </div>
 
     <!-- Chat Area -->
@@ -49,7 +49,7 @@
             area.innerHTML += `<div id="${botId}" class="text-emerald-500"><span class="text-slate-500">IQ:</span> ...thinking</div>`;
 
             try {
-                const response = await fetch('/ai-chat/ask', {
+                const response = await fetch('/ask', {
                     method: 'POST',
                     headers: {'Content-Type': 'text/plain'},
                     body: msg

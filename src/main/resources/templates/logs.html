@@ -17,7 +17,7 @@
 </div>
 <div id="output">Initializing stream...</div>
 <script>
-    const es = new EventSource('/dev/stream');
+    const es = new EventSource('/stream');
     es.onmessage = (e) => {
         const line = document.createElement('div');
         line.textContent = e.data;
