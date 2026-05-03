@@ -7,6 +7,7 @@ import com.gen_ai.gemini_demo.dto.ProjectStructure;
 import com.gen_ai.gemini_demo.service.ProjectIntelligenceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -47,8 +48,18 @@ public class IntelligenceApiController {
     }
 
     // Handles the Chat Terminal interactions
-    @PostMapping("/ask")
-    public String askQuestion(@RequestBody String userQuestion) throws IOException {
-        return aiService.chatWithContext(userQuestion);
+//    @PostMapping("/ask")
+//    public String askQuestion(@RequestBody String userQuestion) throws IOException {
+//        return aiService.chatWithContext(userQuestion);
+//    }
+
+    @PostMapping(value = "/ask", consumes = MediaType.ALL_VALUE, produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> askQuestion(@RequestBody String userQuestion) {
+        try {
+            String result = aiService.chatWithContext(userQuestion);
+            return ResponseEntity.ok(result);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Controller Error: " + e.getMessage());
+        }
     }
 }

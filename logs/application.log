@@ -32,3 +32,546 @@
 2026-05-03T12:37:37.365+05:30  INFO 2472 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2026-05-03T12:50:31.846+05:30  INFO 2472 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2026-05-03T12:50:31.920+05:30  INFO 2472 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T13:00:49.404+05:30  INFO 10964 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : Starting GeminiDemoApplicationTests using Java 18.0.1.1 with PID 10964 (started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T13:00:49.410+05:30  INFO 10964 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T13:00:52.762+05:30  INFO 10964 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T13:00:53.762+05:30  INFO 10964 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : Started GeminiDemoApplicationTests in 5.096 seconds (process running for 6.866)
+2026-05-03T13:00:53.769+05:30  WARN 10964 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T13:00:53.771+05:30  WARN 10964 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T13:03:23.059+05:30  INFO 14056 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 14056 (D:\Downloads\JFSD\gemini-demo\target\gemini-demo-0.0.1-SNAPSHOT.jar started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T13:03:23.065+05:30  INFO 14056 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T13:03:25.854+05:30  INFO 14056 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T13:03:25.883+05:30  INFO 14056 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T13:03:25.884+05:30  INFO 14056 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T13:03:25.945+05:30  INFO 14056 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T13:03:25.946+05:30  INFO 14056 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2759 ms
+2026-05-03T13:03:27.203+05:30  INFO 14056 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T13:03:28.579+05:30  INFO 14056 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T13:03:28.617+05:30  INFO 14056 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 6.638 seconds (process running for 7.954)
+2026-05-03T13:03:28.622+05:30  WARN 14056 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T13:03:28.625+05:30  WARN 14056 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T13:03:41.142+05:30  INFO 14056 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T13:03:41.143+05:30  INFO 14056 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T13:03:41.145+05:30  INFO 14056 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-03T13:03:49.716+05:30  WARN 14056 --- [gemini-demo] [http-nio-5000-exec-4] o.s.a.r.a.SpringAiRetryAutoConfiguration : Retry error. Retry count: 1, Exception: Failed to generate content
+
+java.lang.RuntimeException: Failed to generate content
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.getContentResponse(GoogleGenAiChatModel.java:965) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$3(GoogleGenAiChatModel.java:441) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$4(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.internalCall(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.call(GoogleGenAiChatModel.java:424) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:56) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:115) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:114) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:539) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:537) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:494) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:473) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at com.gen_ai.gemini_demo.service.ProjectIntelligenceService.getFullIntelligence(ProjectIntelligenceService.java:80) ~[!/:0.0.1-SNAPSHOT]
+	at com.gen_ai.gemini_demo.controller.IntelligenceApiController.getData(IntelligenceApiController.java:46) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: com.google.genai.errors.ClientException: 400 . API key not valid. Please pass a valid API key.
+	at com.google.genai.errors.ApiException.throwFromResponse(ApiException.java:94) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.HttpApiResponse.getBody(HttpApiResponse.java:37) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.processResponseForPrivateGenerateContent(Models.java:4914) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.privateGenerateContent(Models.java:4968) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.generateContent(Models.java:6296) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.getContentResponse(GoogleGenAiChatModel.java:962) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	... 69 common frames omitted
+
+2026-05-03T13:03:49.732+05:30 ERROR 14056 --- [gemini-demo] [http-nio-5000-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to generate content] with root cause
+
+com.google.genai.errors.ClientException: 400 . API key not valid. Please pass a valid API key.
+	at com.google.genai.errors.ApiException.throwFromResponse(ApiException.java:94) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.HttpApiResponse.getBody(HttpApiResponse.java:37) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.processResponseForPrivateGenerateContent(Models.java:4914) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.privateGenerateContent(Models.java:4968) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.generateContent(Models.java:6296) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.getContentResponse(GoogleGenAiChatModel.java:962) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$3(GoogleGenAiChatModel.java:441) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$4(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.internalCall(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.call(GoogleGenAiChatModel.java:424) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:56) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:115) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:114) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:539) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:537) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:494) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:473) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at com.gen_ai.gemini_demo.service.ProjectIntelligenceService.getFullIntelligence(ProjectIntelligenceService.java:80) ~[!/:0.0.1-SNAPSHOT]
+	at com.gen_ai.gemini_demo.controller.IntelligenceApiController.getData(IntelligenceApiController.java:46) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-05-03T13:05:44.220+05:30  INFO 14056 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T13:05:44.308+05:30  INFO 14056 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T13:09:29.810+05:30  INFO 5660 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 5660 (D:\Downloads\JFSD\gemini-demo\target\gemini-demo-0.0.1-SNAPSHOT.jar started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T13:09:29.828+05:30  INFO 5660 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T13:09:32.943+05:30  INFO 5660 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T13:09:32.970+05:30  INFO 5660 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T13:09:32.971+05:30  INFO 5660 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T13:09:33.045+05:30  INFO 5660 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T13:09:33.048+05:30  INFO 5660 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3063 ms
+2026-05-03T13:09:34.595+05:30  INFO 5660 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T13:09:36.249+05:30  INFO 5660 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T13:09:36.295+05:30  INFO 5660 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 8.026 seconds (process running for 9.452)
+2026-05-03T13:09:36.306+05:30  WARN 5660 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T13:09:36.320+05:30  WARN 5660 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T13:10:22.563+05:30  INFO 5660 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T13:10:22.564+05:30  INFO 5660 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T13:10:22.567+05:30  INFO 5660 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-03T13:10:29.991+05:30  WARN 5660 --- [gemini-demo] [http-nio-5000-exec-4] o.s.a.r.a.SpringAiRetryAutoConfiguration : Retry error. Retry count: 1, Exception: Failed to generate content
+
+java.lang.RuntimeException: Failed to generate content
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.getContentResponse(GoogleGenAiChatModel.java:965) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$3(GoogleGenAiChatModel.java:441) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$4(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.internalCall(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.call(GoogleGenAiChatModel.java:424) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:56) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:115) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:114) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:539) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:537) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:494) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:473) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at com.gen_ai.gemini_demo.service.ProjectIntelligenceService.getFullIntelligence(ProjectIntelligenceService.java:80) ~[!/:0.0.1-SNAPSHOT]
+	at com.gen_ai.gemini_demo.controller.IntelligenceApiController.getData(IntelligenceApiController.java:46) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: com.google.genai.errors.ClientException: 400 . API key not valid. Please pass a valid API key.
+	at com.google.genai.errors.ApiException.throwFromResponse(ApiException.java:94) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.HttpApiResponse.getBody(HttpApiResponse.java:37) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.processResponseForPrivateGenerateContent(Models.java:4914) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.privateGenerateContent(Models.java:4968) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.generateContent(Models.java:6296) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.getContentResponse(GoogleGenAiChatModel.java:962) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	... 69 common frames omitted
+
+2026-05-03T13:10:30.005+05:30 ERROR 5660 --- [gemini-demo] [http-nio-5000-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to generate content] with root cause
+
+com.google.genai.errors.ClientException: 400 . API key not valid. Please pass a valid API key.
+	at com.google.genai.errors.ApiException.throwFromResponse(ApiException.java:94) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.HttpApiResponse.getBody(HttpApiResponse.java:37) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.processResponseForPrivateGenerateContent(Models.java:4914) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.privateGenerateContent(Models.java:4968) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at com.google.genai.Models.generateContent(Models.java:6296) ~[google-genai-1.37.0.jar!/:1.37.0]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.getContentResponse(GoogleGenAiChatModel.java:962) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$3(GoogleGenAiChatModel.java:441) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230) ~[spring-retry-2.0.12.jar!/:na]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.lambda$internalCall$4(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.internalCall(GoogleGenAiChatModel.java:437) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.google.genai.GoogleGenAiChatModel.call(GoogleGenAiChatModel.java:424) ~[spring-ai-google-genai-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:56) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:115) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:114) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:539) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.11.jar!/:1.15.11]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:537) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:494) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:473) ~[spring-ai-client-chat-1.1.4.jar!/:1.1.4]
+	at com.gen_ai.gemini_demo.service.ProjectIntelligenceService.getFullIntelligence(ProjectIntelligenceService.java:80) ~[!/:0.0.1-SNAPSHOT]
+	at com.gen_ai.gemini_demo.controller.IntelligenceApiController.getData(IntelligenceApiController.java:46) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.18.jar!/:6.2.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.54.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-05-03T14:39:44.420+05:30  INFO 8580 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 8580 (D:\Downloads\JFSD\gemini-demo\target\gemini-demo-0.0.1-SNAPSHOT.jar started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T14:39:44.425+05:30  INFO 8580 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T14:39:47.225+05:30  INFO 8580 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T14:39:47.255+05:30  INFO 8580 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T14:39:47.256+05:30  INFO 8580 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T14:39:47.316+05:30  INFO 8580 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T14:39:47.317+05:30  INFO 8580 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2788 ms
+2026-05-03T14:39:48.512+05:30  INFO 8580 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T14:39:49.654+05:30  WARN 8580 --- [gemini-demo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-03T14:39:49.692+05:30  INFO 8580 --- [gemini-demo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-03T14:39:49.730+05:30 ERROR 8580 --- [gemini-demo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
+2026-05-03T14:40:08.175+05:30  INFO 5660 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T14:40:08.307+05:30  INFO 5660 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T14:40:22.711+05:30  INFO 6788 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 6788 (D:\Downloads\JFSD\gemini-demo\target\gemini-demo-0.0.1-SNAPSHOT.jar started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T14:40:22.716+05:30  INFO 6788 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T14:40:25.562+05:30  INFO 6788 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T14:40:25.595+05:30  INFO 6788 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T14:40:25.596+05:30  INFO 6788 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T14:40:25.663+05:30  INFO 6788 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T14:40:25.665+05:30  INFO 6788 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2839 ms
+2026-05-03T14:40:27.112+05:30  INFO 6788 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T14:40:28.446+05:30  INFO 6788 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T14:40:28.491+05:30  INFO 6788 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 7.068 seconds (process running for 8.295)
+2026-05-03T14:40:28.499+05:30  WARN 6788 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T14:40:28.502+05:30  WARN 6788 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T14:40:43.717+05:30  INFO 6788 --- [gemini-demo] [http-nio-5000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T14:40:43.718+05:30  INFO 6788 --- [gemini-demo] [http-nio-5000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T14:40:43.724+05:30  INFO 6788 --- [gemini-demo] [http-nio-5000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-03T16:43:37.170+05:30  INFO 8972 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : Starting GeminiDemoApplicationTests using Java 18.0.1.1 with PID 8972 (started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T16:43:37.173+05:30  INFO 8972 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T16:43:41.239+05:30  INFO 8972 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T16:43:42.456+05:30  INFO 8972 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : Started GeminiDemoApplicationTests in 6.152 seconds (process running for 8.202)
+2026-05-03T16:43:42.462+05:30  WARN 8972 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T16:43:42.465+05:30  WARN 8972 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T16:46:02.145+05:30  INFO 15132 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 15132 (D:\Downloads\JFSD\gemini-demo\target\gemini-demo-0.0.1-SNAPSHOT.jar started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T16:46:02.151+05:30  INFO 15132 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T16:46:05.121+05:30  INFO 15132 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T16:46:05.147+05:30  INFO 15132 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T16:46:05.148+05:30  INFO 15132 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T16:46:05.216+05:30  INFO 15132 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T16:46:05.217+05:30  INFO 15132 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2951 ms
+2026-05-03T16:46:06.604+05:30  INFO 15132 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T16:46:07.966+05:30  INFO 15132 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T16:46:08.011+05:30  INFO 15132 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 7.142 seconds (process running for 8.348)
+2026-05-03T16:46:08.018+05:30  WARN 15132 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T16:46:08.022+05:30  WARN 15132 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T16:46:29.860+05:30  INFO 15132 --- [gemini-demo] [http-nio-5000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T16:46:29.861+05:30  INFO 15132 --- [gemini-demo] [http-nio-5000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T16:46:29.863+05:30  INFO 15132 --- [gemini-demo] [http-nio-5000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-03T17:19:42.227+05:30  INFO 12276 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 12276 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T17:19:42.232+05:30  INFO 12276 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T17:19:45.104+05:30  INFO 12276 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T17:19:45.132+05:30  INFO 12276 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T17:19:45.133+05:30  INFO 12276 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T17:19:45.295+05:30  INFO 12276 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T17:19:45.296+05:30  INFO 12276 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2950 ms
+2026-05-03T17:19:46.525+05:30  INFO 12276 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T17:19:47.817+05:30  WARN 12276 --- [gemini-demo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-03T17:19:47.860+05:30  INFO 12276 --- [gemini-demo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-03T17:19:47.909+05:30 ERROR 12276 --- [gemini-demo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
+2026-05-03T17:20:03.685+05:30  INFO 15132 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T17:20:03.761+05:30  INFO 15132 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T17:20:22.983+05:30  INFO 13296 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 13296 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T17:20:22.989+05:30  INFO 13296 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T17:20:26.358+05:30  INFO 13296 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T17:20:26.387+05:30  INFO 13296 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T17:20:26.388+05:30  INFO 13296 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T17:20:26.556+05:30  INFO 13296 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T17:20:26.557+05:30  INFO 13296 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3455 ms
+2026-05-03T17:20:27.984+05:30  INFO 13296 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T17:20:29.448+05:30  INFO 13296 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T17:20:29.476+05:30  INFO 13296 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 7.674 seconds (process running for 8.864)
+2026-05-03T17:20:29.487+05:30  WARN 13296 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T17:20:29.490+05:30  WARN 13296 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T17:21:33.490+05:30  INFO 13296 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T17:21:33.490+05:30  INFO 13296 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T17:21:33.492+05:30  INFO 13296 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-03T17:53:35.412+05:30  INFO 13296 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T17:53:35.558+05:30  INFO 13296 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T18:41:52.517+05:30  INFO 8984 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 8984 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T18:41:52.526+05:30  INFO 8984 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T18:41:56.551+05:30  INFO 8984 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T18:41:56.599+05:30  INFO 8984 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T18:41:56.599+05:30  INFO 8984 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T18:41:56.803+05:30  INFO 8984 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T18:41:56.804+05:30  INFO 8984 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4122 ms
+2026-05-03T18:41:58.277+05:30  INFO 8984 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T18:41:59.646+05:30  INFO 8984 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T18:41:59.679+05:30  INFO 8984 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 8.546 seconds (process running for 9.825)
+2026-05-03T18:41:59.685+05:30  WARN 8984 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T18:41:59.692+05:30  WARN 8984 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T18:43:02.459+05:30  INFO 8984 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T18:43:02.460+05:30  INFO 8984 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T18:43:02.466+05:30  INFO 8984 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-05-03T18:48:15.616+05:30  INFO 8984 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T18:48:15.711+05:30  INFO 8984 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T18:51:43.880+05:30  INFO 8516 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 8516 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T18:51:43.886+05:30  INFO 8516 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T18:51:48.461+05:30  INFO 8516 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T18:51:48.497+05:30  INFO 8516 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T18:51:48.498+05:30  INFO 8516 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T18:51:48.746+05:30  INFO 8516 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T18:51:48.747+05:30  INFO 8516 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4722 ms
+2026-05-03T18:51:50.629+05:30  INFO 8516 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T18:51:52.404+05:30  INFO 8516 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T18:51:52.439+05:30  INFO 8516 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 11.529 seconds (process running for 13.056)
+2026-05-03T18:51:52.453+05:30  WARN 8516 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T18:51:52.456+05:30  WARN 8516 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T18:52:04.200+05:30  INFO 8516 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T18:52:04.201+05:30  INFO 8516 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T18:52:04.204+05:30  INFO 8516 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-03T18:56:47.879+05:30  INFO 8516 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T18:56:47.932+05:30  INFO 8516 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T18:57:19.393+05:30  INFO 14708 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 14708 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T18:57:19.400+05:30  INFO 14708 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T18:57:22.244+05:30  INFO 14708 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T18:57:22.276+05:30  INFO 14708 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T18:57:22.277+05:30  INFO 14708 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T18:57:22.442+05:30  INFO 14708 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T18:57:22.443+05:30  INFO 14708 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2909 ms
+2026-05-03T18:57:23.728+05:30  INFO 14708 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T18:57:24.822+05:30  INFO 14708 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T18:57:24.846+05:30  INFO 14708 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 6.615 seconds (process running for 7.702)
+2026-05-03T18:57:24.853+05:30  WARN 14708 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T18:57:24.858+05:30  WARN 14708 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T19:00:04.760+05:30  INFO 14708 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T19:00:04.761+05:30  INFO 14708 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T19:00:04.763+05:30  INFO 14708 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-03T19:06:14.367+05:30  INFO 10948 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : Starting GeminiDemoApplicationTests using Java 18.0.1.1 with PID 10948 (started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T19:06:14.372+05:30  INFO 10948 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T19:06:21.099+05:30  INFO 10948 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T19:06:22.511+05:30  INFO 10948 --- [gemini-demo] [main] c.g.g.GeminiDemoApplicationTests         : Started GeminiDemoApplicationTests in 8.897 seconds (process running for 10.896)
+2026-05-03T19:06:22.518+05:30  WARN 10948 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T19:06:22.521+05:30  WARN 10948 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T19:11:19.897+05:30  INFO 14708 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T19:11:19.993+05:30  INFO 14708 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T19:12:32.568+05:30  INFO 7440 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 7440 (D:\Downloads\JFSD\gemini-demo\target\gemini-demo-0.0.1-SNAPSHOT.jar started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T19:12:32.574+05:30  INFO 7440 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T19:12:35.643+05:30  INFO 7440 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T19:12:35.677+05:30  INFO 7440 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T19:12:35.678+05:30  INFO 7440 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T19:12:35.762+05:30  INFO 7440 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T19:12:35.764+05:30  INFO 7440 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3057 ms
+2026-05-03T19:12:37.192+05:30  INFO 7440 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T19:12:38.500+05:30  INFO 7440 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T19:12:38.548+05:30  INFO 7440 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 7.362 seconds (process running for 8.763)
+2026-05-03T19:12:38.558+05:30  WARN 7440 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T19:12:38.562+05:30  WARN 7440 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T19:25:11.612+05:30  INFO 7440 --- [gemini-demo] [http-nio-5000-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T19:25:11.613+05:30  INFO 7440 --- [gemini-demo] [http-nio-5000-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T19:25:11.620+05:30  INFO 7440 --- [gemini-demo] [http-nio-5000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-03T19:29:53.823+05:30  INFO 7440 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T19:29:53.906+05:30  INFO 7440 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete

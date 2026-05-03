@@ -78,6 +78,26 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<resources>
+			<!-- This makes the pom.xml itself accessible from the classpath -->
+			<resource>
+				<directory>${project.basedir}</directory>
+				<includes>
+					<include>pom.xml</include>
+				</includes>
+			</resource>
+			<!-- This bundles all source code into the JAR for the AI to read -->
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.java</include>
+				</includes>
+			</resource>
+			<!-- This ensures templates and other resources are included -->
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 	</build>
 
 </project>
