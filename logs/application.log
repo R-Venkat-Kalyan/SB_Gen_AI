@@ -1,107 +1,34 @@
-2026-05-02T11:03:24.029+05:30  INFO 11960 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 11960 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
-2026-05-02T11:03:24.105+05:30  INFO 11960 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-05-02T11:03:27.192+05:30  INFO 11960 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2026-05-02T11:03:27.225+05:30  INFO 11960 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-02T11:03:27.226+05:30  INFO 11960 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-02T11:03:27.407+05:30  INFO 11960 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-02T11:03:27.408+05:30  INFO 11960 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3136 ms
-2026-05-02T11:03:30.186+05:30  INFO 11960 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
-2026-05-02T11:03:30.230+05:30  INFO 11960 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 7.464 seconds (process running for 8.904)
-2026-05-02T11:03:30.237+05:30  WARN 11960 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-05-02T11:03:30.241+05:30  WARN 11960 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-05-02T11:03:53.893+05:30  INFO 11960 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-02T11:03:53.894+05:30  INFO 11960 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-02T11:03:53.896+05:30  INFO 11960 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-02T11:04:43.130+05:30  INFO 11960 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-02T11:04:43.198+05:30  INFO 11960 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-02T11:06:46.129+05:30  INFO 5644 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 5644 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
-2026-05-02T11:06:46.135+05:30  INFO 5644 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-05-02T11:06:48.834+05:30  INFO 5644 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2026-05-02T11:06:48.862+05:30  INFO 5644 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-02T11:06:48.863+05:30  INFO 5644 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-02T11:06:49.022+05:30  INFO 5644 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-02T11:06:49.023+05:30  INFO 5644 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2763 ms
-2026-05-02T11:06:50.959+05:30  INFO 5644 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
-2026-05-02T11:06:50.996+05:30  INFO 5644 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 5.965 seconds (process running for 7.025)
-2026-05-02T11:06:51.002+05:30  WARN 5644 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-05-02T11:06:51.005+05:30  WARN 5644 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-05-02T11:07:26.868+05:30  INFO 5644 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-02T11:07:26.869+05:30  INFO 5644 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-02T11:07:26.871+05:30  INFO 5644 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-02T13:16:15.122+05:30  INFO 5644 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-02T13:16:15.256+05:30  INFO 5644 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-02T17:09:11.115+05:30  INFO 1044 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 1044 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
-2026-05-02T17:09:11.120+05:30  INFO 1044 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-05-02T17:09:13.886+05:30  INFO 1044 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2026-05-02T17:09:13.919+05:30  INFO 1044 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-02T17:09:13.920+05:30  INFO 1044 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-02T17:09:14.077+05:30  INFO 1044 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-02T17:09:14.077+05:30  INFO 1044 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2829 ms
-2026-05-02T17:09:16.138+05:30  INFO 1044 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
-2026-05-02T17:09:16.173+05:30  INFO 1044 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 6.175 seconds (process running for 7.229)
-2026-05-02T17:09:16.176+05:30  WARN 1044 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-05-02T17:09:16.179+05:30  WARN 1044 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-05-02T17:09:53.954+05:30  INFO 1044 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-02T17:09:53.955+05:30  INFO 1044 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-02T17:09:53.957+05:30  INFO 1044 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-02T17:29:51.423+05:30  INFO 1044 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-02T17:29:51.487+05:30  INFO 1044 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-02T18:56:31.445+05:30  INFO 9472 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 9472 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
-2026-05-02T18:56:31.449+05:30  INFO 9472 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-05-02T18:56:34.346+05:30  INFO 9472 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2026-05-02T18:56:34.376+05:30  INFO 9472 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-02T18:56:34.377+05:30  INFO 9472 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-02T18:56:34.538+05:30  INFO 9472 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-02T18:56:34.539+05:30  INFO 9472 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2947 ms
-2026-05-02T18:56:35.440+05:30  WARN 9472 --- [gemini-demo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatController' defined in file [D:\Downloads\JFSD\gemini-demo\target\classes\com\gen_ai\gemini_demo\controller\ChatController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-05-02T18:56:35.461+05:30  INFO 9472 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-05-02T18:56:35.490+05:30  INFO 9472 --- [gemini-demo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-05-02T18:56:35.537+05:30 ERROR 9472 --- [gemini-demo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 1 of constructor in com.gen_ai.gemini_demo.controller.ChatController required a bean of type 'org.springframework.ai.chat.client.ChatClient' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient' in your configuration.
-
-2026-05-02T20:05:00.093+05:30  INFO 12584 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 12584 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
-2026-05-02T20:05:00.100+05:30  INFO 12584 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-05-02T20:05:03.760+05:30  INFO 12584 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2026-05-02T20:05:03.807+05:30  INFO 12584 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-02T20:05:03.808+05:30  INFO 12584 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-02T20:05:04.003+05:30  INFO 12584 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-02T20:05:04.005+05:30  INFO 12584 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3719 ms
-2026-05-02T20:05:06.431+05:30  INFO 12584 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
-2026-05-02T20:05:06.477+05:30  INFO 12584 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 7.702 seconds (process running for 8.833)
-2026-05-02T20:05:06.482+05:30  WARN 12584 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-05-02T20:05:06.485+05:30  WARN 12584 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-05-02T20:09:12.786+05:30  INFO 12584 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-02T20:09:12.787+05:30  INFO 12584 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-02T20:09:12.789+05:30  INFO 12584 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-02T22:00:39.130+05:30  INFO 12584 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-02T22:00:39.193+05:30  INFO 12584 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-05-02T22:10:24.544+05:30  INFO 14740 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 14740 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
-2026-05-02T22:10:24.550+05:30  INFO 14740 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-05-02T22:10:27.554+05:30  INFO 14740 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
-2026-05-02T22:10:27.586+05:30  INFO 14740 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-02T22:10:27.586+05:30  INFO 14740 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-05-02T22:10:27.766+05:30  INFO 14740 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-02T22:10:27.767+05:30  INFO 14740 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3075 ms
-2026-05-02T22:10:30.149+05:30  INFO 14740 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
-2026-05-02T22:10:30.192+05:30  INFO 14740 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 6.848 seconds (process running for 7.888)
-2026-05-02T22:10:30.199+05:30  WARN 14740 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-05-02T22:10:30.202+05:30  WARN 14740 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-05-02T22:11:30.453+05:30  INFO 14740 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-02T22:11:30.454+05:30  INFO 14740 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-02T22:11:30.456+05:30  INFO 14740 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-02T22:16:08.063+05:30  INFO 14740 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-02T22:16:08.135+05:30  INFO 14740 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T12:23:15.051+05:30  INFO 6616 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 6616 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T12:23:15.068+05:30  INFO 6616 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T12:23:18.058+05:30  INFO 6616 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T12:23:18.089+05:30  INFO 6616 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T12:23:18.090+05:30  INFO 6616 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T12:23:18.259+05:30  INFO 6616 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T12:23:18.260+05:30  INFO 6616 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3022 ms
+2026-05-03T12:23:19.798+05:30  INFO 6616 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T12:23:21.535+05:30  INFO 6616 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T12:23:21.568+05:30  INFO 6616 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 7.787 seconds (process running for 9.074)
+2026-05-03T12:23:21.576+05:30  WARN 6616 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T12:23:21.579+05:30  WARN 6616 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T12:25:36.273+05:30  INFO 6616 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T12:25:36.274+05:30  INFO 6616 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T12:25:36.276+05:30  INFO 6616 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-03T12:37:19.126+05:30  INFO 6616 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T12:37:19.190+05:30  INFO 6616 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-03T12:37:24.009+05:30  INFO 2472 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Starting GeminiDemoApplication using Java 18.0.1.1 with PID 2472 (D:\Downloads\JFSD\gemini-demo\target\classes started by DELL in D:\Downloads\JFSD\gemini-demo)
+2026-05-03T12:37:24.014+05:30  INFO 2472 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-03T12:37:26.868+05:30  INFO 2472 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2026-05-03T12:37:26.900+05:30  INFO 2472 --- [gemini-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-03T12:37:26.901+05:30  INFO 2472 --- [gemini-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-03T12:37:27.058+05:30  INFO 2472 --- [gemini-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-03T12:37:27.060+05:30  INFO 2472 --- [gemini-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2936 ms
+2026-05-03T12:37:28.141+05:30  INFO 2472 --- [gemini-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-03T12:37:29.063+05:30  INFO 2472 --- [gemini-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2026-05-03T12:37:29.096+05:30  INFO 2472 --- [gemini-demo] [main] c.g.gemini_demo.GeminiDemoApplication    : Started GeminiDemoApplication in 6.195 seconds (process running for 7.364)
+2026-05-03T12:37:29.103+05:30  WARN 2472 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-03T12:37:29.108+05:30  WARN 2472 --- [gemini-demo] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-03T12:37:37.363+05:30  INFO 2472 --- [gemini-demo] [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-03T12:37:37.363+05:30  INFO 2472 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-03T12:37:37.365+05:30  INFO 2472 --- [gemini-demo] [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-03T12:50:31.846+05:30  INFO 2472 --- [gemini-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-03T12:50:31.920+05:30  INFO 2472 --- [gemini-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete

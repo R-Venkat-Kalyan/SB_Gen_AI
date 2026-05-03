@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project IQ | The Intelligence Layer for Java</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/artificial-intelligence.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030303;
+            color: #ffffff;
+        }
+        .mesh-gradient {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background:
+                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.15) 0px, transparent 50%);
+            z-index: -1;
+        }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-5px);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div class="mesh-gradient"></div>
+
+<!-- Navigation -->
+<nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+    <div class="text-2xl font-extrabold tracking-tighter flex items-center gap-2">
+        <div class="w-8 h-8 bg-indigo-600 rounded-lg"></div>
+        PROJECT<span class="text-indigo-400">IQ</span>
+    </div>
+    <div class="text-xs font-bold tracking-widest text-slate-500 uppercase px-4 py-2 border border-white/10 rounded-full">
+        System Status: <span class="text-emerald-500">Operational</span>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<main class="max-w-7xl mx-auto px-6 pt-20 pb-32">
+    <div class="text-center mb-24">
+        <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-[1.1] text-glow">
+            The Brain for your <br/>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-white to-cyan-400">Spring Boot Ecosystem.</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-slate-400 text-lg md:text-xl font-light leading-relaxed mb-12">
+            Stop guessing. Start knowing. Project IQ analyzes your entire Java codebase
+            in seconds, delivering semantic insights that human reviews take days to find.
+        </p>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+            <a href="/dashboard" class="group relative px-10 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-all">
+                    <span class="relative z-10 flex items-center gap-2">
+                        Access Dashboard
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </span>
+            </a>
+            <div class="text-slate-500 text-sm font-medium">No configuration required. Just run.</div>
+        </div>
+    </div>
+
+    <!-- Content Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+        <!-- Large Card 1 -->
+        <div class="md:col-span-4 bento-card p-10 rounded-[2.5rem]">
+            <h3 class="text-2xl font-bold mb-4">Semantic Code Intelligence</h3>
+            <p class="text-slate-400 leading-relaxed mb-6">
+                Powered by <b>Gemini 3 Flash</b>, Project IQ doesn't just "read" your code—it understands it.
+                From identifying hidden logic bugs to mapping complex data flows across multiple layers,
+                get a 360-degree view of your technical debt and business logic instantly.
+            </p>
+            <div class="flex gap-3">
+                <span class="text-xs bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/20">Java 17+</span>
+                <span class="text-xs bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full border border-cyan-500/20">Spring Boot</span>
+            </div>
+        </div>
+
+        <!-- Small Card 1 -->
+        <div class="md:col-span-2 bento-card p-10 rounded-[2.5rem] flex flex-col justify-center">
+            <div class="text-4xl mb-4">🏛️</div>
+            <h3 class="text-xl font-bold mb-2 text-amber-400">Lead Audit</h3>
+            <p class="text-sm text-slate-500">Automated SOLID & DRY compliance scoring with suggested refactors.</p>
+        </div>
+
+        <!-- Small Card 2 -->
+        <div class="md:col-span-2 bento-card p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-l-red-500">
+            <div class="text-4xl mb-4">📜</div>
+            <h3 class="text-xl font-bold mb-2 text-red-400">Live Diagnostics</h3>
+            <p class="text-sm text-slate-500">Real-time log streaming paired with AI stack-trace analysis.</p>
+        </div>
+
+        <!-- Large Card 2 -->
+        <div class="md:col-span-4 bento-card p-10 rounded-[2.5rem]">
+            <h3 class="text-2xl font-bold mb-4">Three Personas, One Source</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div>
+                    <span class="text-indigo-400 font-bold block mb-1">User</span>
+                    <p class="text-xs text-slate-500 font-light">Plain English walkthroughs and UI navigation flow.</p>
+                </div>
+                <div>
+                    <span class="text-blue-400 font-bold block mb-1">Developer</span>
+                    <p class="text-xs text-slate-500 font-light">Deep KT mapping, API routes, and service logic.</p>
+                </div>
+                <div>
+                    <span class="text-amber-400 font-bold block mb-1">Architect</span>
+                    <p class="text-xs text-slate-500 font-light">Industry standard reviews and optimization tips.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="py-12 border-t border-white/5 text-center">
+    <div class="text-slate-600 text-xs tracking-widest font-bold uppercase">
+        Project Intelligence Hub &bull; Built for the Future of DevX
+    </div>
+</footer>
+</body>
+</html>
