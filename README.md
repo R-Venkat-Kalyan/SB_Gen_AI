@@ -1,4 +1,4 @@
-# 🚀 IntelligenceIQ
+# 🚀 [IntelligenceIQ](http://springintelligeneceaihub-env.eba-guquqqc5.us-east-1.elasticbeanstalk.com/)
 
 <div align="center">
 
