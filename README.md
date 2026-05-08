@@ -20,7 +20,7 @@
 ## 🌐 Project Access
 
 - **Live Production:** http://springintelligeneceaihub-env.eba-guquqqc5.us-east-1.elasticbeanstalk.com/  
-- **GitHub Repository:** [https://github.com/R-Venkat-Kalyan/SB_Gen_AI/edit/gemini-demo]  
+- **GitHub Repository:** https://github.com/R-Venkat-Kalyan/SB_Gen_AI/edit/gemini-demo  
 
 ---
 
@@ -75,8 +75,6 @@ By integrating an advanced **AI Intelligence Engine**, the platform enables real
 
 ## 🛠️ Setup & Configuration
 
-> 🔐 Never commit `.env` or sensitive configs. Use environment variables in AWS.
-
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/R-Venkat-Kalyan/SB_Gen_AI/edit/gemini-demo
@@ -97,19 +95,6 @@ mvn clean package
 ```bash
 java -jar target/gemini-demo-0.0.1-SNAPSHOT.jar
 ```
-
----
-
-<details>
-<summary><b>⚙️ Advanced Notes</b></summary>
-
-- Ensure AWS environment variables are configured  
-- Monitor logs via `web.stdout.log`  
-- Validate classpath scanning on deployment  
-- Enable HTTPS in production  
-
-</details>
-
 ---
 
 ## 🖼️ Interface Modules
