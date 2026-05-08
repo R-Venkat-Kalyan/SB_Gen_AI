@@ -13,9 +13,6 @@
 
 ---
 
-![Hero Image](./assets/emerald-terminal.gif)
-
----
 
 ## 🌐 Project Access
 
