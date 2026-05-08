@@ -1,12 +1,11 @@
 # 🚀 IntelligenceIQ
-http://springintelligeneceaihub-env.eba-guquqqc5.us-east-1.elasticbeanstalk.com/
+
 <div align="center">
 
 ### Bridging Codebase Complexity with Generative Administrative Intelligence
 
-![Build Status](https://img.shields.io/badge/Build-Passing-success?style=for-the-badge)
-![Java](https://img.shields.io/badge/Java-25-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5.14-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-success?style=for-the-badge&logo=springboot)
 ![AWS](https://img.shields.io/badge/AWS-Elastic_Beanstalk-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![AI](https://img.shields.io/badge/AI-Gemini_1.5_Pro-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
@@ -20,8 +19,8 @@ http://springintelligeneceaihub-env.eba-guquqqc5.us-east-1.elasticbeanstalk.com/
 
 ## 🌐 Project Access
 
-- **Live Production:** [Insert Your Beanstalk URL]  
-- **GitHub Repository:** [Insert Your GitHub Link]  
+- **Live Production:** http://springintelligeneceaihub-env.eba-guquqqc5.us-east-1.elasticbeanstalk.com/  
+- **GitHub Repository:** [https://github.com/R-Venkat-Kalyan/SB_Gen_AI/edit/gemini-demo]  
 
 ---
 
@@ -56,7 +55,7 @@ By integrating an advanced **AI Intelligence Engine**, the platform enables real
 ## ⚙️ Tech Stack
 
 **Backend**
-- Java 25 (Amazon Corretto)  
+- Java 17
 - Spring Boot 3.5.14  
 - Spring AI  
 
@@ -69,7 +68,7 @@ By integrating an advanced **AI Intelligence Engine**, the platform enables real
 - Terminal-based UI (Emerald Theme)  
 
 **Cloud**
-- AWS Elastic Beanstalk (Linux/Tomcat)  
+- AWS Elastic Beanstalk 
 - Port: 5000  
 
 ---
@@ -80,8 +79,7 @@ By integrating an advanced **AI Intelligence Engine**, the platform enables real
 
 ### 1. Clone Repository
 ```bash
-git clone [Insert Repo URL]
-cd IntelligenceIQ
+git clone https://github.com/R-Venkat-Kalyan/SB_Gen_AI/edit/gemini-demo
 ```
 
 ### 2. Environment Setup
@@ -97,7 +95,7 @@ mvn clean package
 
 ### 4. Run
 ```bash
-java -jar target/IntelligenceIQ-0.0.1-SNAPSHOT.jar
+java -jar target/gemini-demo-0.0.1-SNAPSHOT.jar
 ```
 
 ---
@@ -139,7 +137,7 @@ resources/
  ├── static/
  └── application.yml
 
-.env.example
+.env
 pom.xml
 ```
 
@@ -147,37 +145,13 @@ pom.xml
 
 ## 🧠 Architecture Highlights
 
-- Clean Layered Architecture  
-- Role-Based Access Control (RBAC)  
+- Clean Layered Architecture    
 - Stateless Service Design  
 - High-performance caching layer  
 - Secure AI prompt filtering  
 
 ---
-
-## 🛡️ Security Practices
-
-> 🔐 Environment-based configuration only  
-> 🚫 Sensitive files excluded from AI context  
-> ⚡ Controlled caching for consistency  
-> 📊 Runtime logging for observability  
-
----
-
-## 📢 Senior Dev Tips
-
-- Add a high-quality **Hero GIF** of the Emerald Terminal  
-- Maintain a `.env.example` for security standards  
-- Monitor `web.stdout.log` to verify indexing behavior  
-- Use meaningful commit messages (`feat:`, `fix:`)  
-
----
-
-## 📜 License
-
-MIT License
-
----
+ 
 
 ## 🌟 Final Note
 
